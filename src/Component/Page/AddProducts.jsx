@@ -11,7 +11,19 @@ const AddProducts = () => {
     const name = form.name.value;
     const price = form.price.value;
     const description = form.description.value;
-    console.log(image, name, brand, type, rating, price, description);
+    const car = { image, name, price, description, brand, type, rating };
+    console.log(car);
+    fetch("http://localhost:5000/cars",{
+        method:'POST',
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify(car)
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   const handleBrandChange = (e) => {
