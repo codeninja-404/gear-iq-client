@@ -2,7 +2,7 @@ import Banner from "../Header/Banner";
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Banner></Banner>
     </div>
   );

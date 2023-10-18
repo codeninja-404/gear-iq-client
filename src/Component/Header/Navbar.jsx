@@ -17,13 +17,13 @@ const Navbar = () => {
   );
   return (
     <div className="fixed text-white z-40 bg-white bg-opacity-30 top-0 left-0 right-0">
-      <div className="navbar  ">
+      <div className="navbar container mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-sm lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 text-yellow-400 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
