@@ -1,8 +1,8 @@
-
+import { Link } from "react-router-dom";
 import Star from "../../Star/Star";
 
 const CarCards = ({ car }) => {
-  const { brand, image, name, type, price, rating } = car;
+  const {_id, brand, image, name, type, price, rating } = car;
   console.log(car);
   return (
     <div>
@@ -25,12 +25,15 @@ const CarCards = ({ car }) => {
             <Star rating={rating}></Star>
           </div>
           <div className=" flex gap-2 ">
-            <button className="btn btn-success btn-sm text-xs w-1/2">
+            <Link
+              to={`/details/${_id}`}
+              className="btn btn-success text-xs btn-sm w-1/2"
+            >
               Details
-            </button>
-            <button className="btn btn-warning text-xs btn-sm w-1/2">
+            </Link>
+            <Link to={`/update/${_id}`} className="btn btn-warning text-xs btn-sm w-1/2">
               Update Info
-            </button>
+            </Link>
           </div>
         </div>
       </div>

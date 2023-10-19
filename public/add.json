@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Toyota",
+        "imageUrls": [
+            "https://i.ibb.co/yn6JWW3/In-Shot-20231020-010237447-min.jpg",
+            "https://i.ibb.co/x6HK3Zm/In-Shot-20231020-010254342-min.jpg",
+            "https://i.ibb.co/ThM1NZ9/In-Shot-20231020-010217633-min.jpg"
+        ]
+    },
+    {
+        "name": "Ford",
+        "imageUrls": [
+            "https://example.com/ford_image1.jpg",
+            "https://example.com/ford_image2.jpg",
+            "https://example.com/ford_image3.jpg"
+        ]
+    },
+    {
+        "name": "Honda",
+        "imageUrls": [
+            "https://example.com/honda_image1.jpg",
+            "https://example.com/honda_image2.jpg",
+            "https://example.com/honda_image3.jpg"
+        ]
+    },
+    {
+        "name": "BMW",
+        "imageUrls": [
+            "https://example.com/bmw_image1.jpg",
+            "https://example.com/bmw_image2.jpg",
+            "https://example.com/bmw_image3.jpg"
+        ]
+    },
+    {
+        "name": "Audi",
+        "imageUrls": [
+            "https://example.com/audi_image1.jpg",
+            "https://example.com/audi_image2.jpg",
+            "https://example.com/audi_image3.jpg"
+        ]
+    },
+    {
+        "name": "Tesla",
+        "imageUrls": [
+            "https://example.com/tesla_image1.jpg",
+            "https://example.com/tesla_image2.jpg",
+            "https://example.com/tesla_image3.jpg"
+        ]
+    }
+]

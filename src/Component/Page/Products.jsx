@@ -1,22 +1,67 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import CarCards from "./Cards/CarCards";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Products = () => {
+  const [adds, setAdds] = useState([]);
   const { brandName } = useParams();
-  console.log(brandName.toLowerCase());
+
   const cars = useLoaderData();
 
   const singleBrand = cars.filter((car) =>
     car?.brand.toLowerCase().includes(brandName.toLowerCase())
   );
+  useEffect(() => {
+    fetch("/add.json")
+      .then((res) => res.json())
+      .then((data) => setAdds(data));
+  }, []);
 
-  //   console.log(cars);
+  const singleBrandAdd = adds.filter((add) =>
+    add?.name.toLowerCase().includes(brandName.toLowerCase())
+  );
+
+  const addImgs = singleBrandAdd[0]?.imageUrls;
+
   return (
     <div className="pt-12  my-20 min-h-screen">
-      <div className="container px-2 mx-auto gap-4 grid md:grid-cols-2">
-        {singleBrand.map((car) => (
-          <CarCards key={car._id} car={car}></CarCards>
-        ))}
+      <div className="container px-2 mx-auto ">
+        <div className="mb-20">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay,  Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {addImgs?.map((img, idx) => (
+              <SwiperSlide key={idx}>
+                <img className="h-full mx-auto rounded-3xl w-4/5 lg:w-1/2 " src={img} alt="Album" />
+              </SwiperSlide>
+            ))}
+          
+          </Swiper>
+        </div>
+        <h2 className="uppercase border-gray-500 text-center border-b-2 mb-5 pb-2 text-3xl">
+          Cars Available based on {brandName} brand
+        </h2>
+        <div className="gap-4 grid md:grid-cols-2">
+          {singleBrand.map((car) => (
+            <CarCards key={car._id} car={car}></CarCards>
+          ))}
+        </div>
       </div>
     </div>
   );
