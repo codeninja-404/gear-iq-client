@@ -43,24 +43,36 @@ const Products = () => {
               clickable: true,
             }}
             navigation={true}
-            modules={[Autoplay,  Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
             {addImgs?.map((img, idx) => (
               <SwiperSlide key={idx}>
-                <img className="h-full mx-auto rounded-3xl w-4/5 lg:w-1/2 " src={img} alt="Album" />
+                <img
+                  className="h-full mx-auto rounded-3xl w-4/5 lg:w-1/2 "
+                  src={img}
+                  alt="Album"
+                />
               </SwiperSlide>
             ))}
-          
           </Swiper>
         </div>
         <h2 className="uppercase border-gray-500 text-center border-b-2 mb-5 pb-2 text-3xl">
           Cars Available based on {brandName} brand
         </h2>
-        <div className="gap-4 grid md:grid-cols-2">
-          {singleBrand.map((car) => (
-            <CarCards key={car._id} car={car}></CarCards>
-          ))}
+        <div>
+          {singleBrand.length > 0 ? (
+            <div className="gap-4 grid md:grid-cols-2">
+              {singleBrand.map((car) => (
+                <CarCards key={car._id} car={car}></CarCards>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center space-y-6 my-20">
+              <h2 className="font-bold uppercase text-4xl text-red-500">Sorry ....</h2>
+              <p className="font-bold text-3xl">NO Cars Available For now!!!!</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -6,11 +6,13 @@ import MyCart from "./Component/Page/MyCart";
 import Products from "./Component/Page/Products";
 import UpdateProduct from "./Component/Page/UpdateProduct";
 import Details from "./Component/Page/Cards/Details";
+import Error from "./Component/Page/Error";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <LayOut></LayOut>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -36,6 +38,7 @@ export const router = createBrowserRouter([
       {
         path: "/cart",
         element: <MyCart></MyCart>,
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       {
         path: "/products/:brandName",

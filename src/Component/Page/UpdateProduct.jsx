@@ -13,8 +13,8 @@ const UpdateProduct = () => {
     const image = form.imageUrl.value;
     const name = form.name.value;
     const price = form.price.value;
-    const description = form.description.value;
-    const update = { image, name, price, description, brand, type, rating };
+
+    const update = { image, name, price, brand, type, rating };
 
     fetch(`http://localhost:5000/cars/${singleData._id}`, {
       method: "PUT",
@@ -24,9 +24,7 @@ const UpdateProduct = () => {
       body: JSON.stringify(update),
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+      .then((data) => {});
   };
 
   const handleBrandChange = (e) => {
@@ -42,7 +40,6 @@ const UpdateProduct = () => {
     <div className="pt-32 min-h-screen ">
       <div className="container px-2 mx-auto  ">
         <h2 className="uppercase mb-5 text-center border-b-4 border-gray-600 font-bold text-red-500 text-4xl">
-          
           Update Information for : {singleData.name}
         </h2>
         <form onSubmit={handleUpdate}>
@@ -139,19 +136,7 @@ const UpdateProduct = () => {
               </select>
             </div>
           </div>
-          <div>
-            <div className="">
-              <label className="label">Car Description:</label>
-              <textarea
-                type="text"
-                name="description"
-                defaultValue={singleData.description}
-                placeholder="Car Description"
-                className="w-full h-20 py-2 input input-bordered"
-                required
-              />
-            </div>
-          </div>
+          <div></div>
 
           <div className="my-4 text-center">
             <input

@@ -3,7 +3,7 @@ import Star from "../../Star/Star";
 
 const CarCards = ({ car }) => {
   const {_id, brand, image, name, type, price, rating } = car;
-  console.log(car);
+  
   return (
     <div>
       <div className="card lg:card-side border border-gray-500 shadow-xl">

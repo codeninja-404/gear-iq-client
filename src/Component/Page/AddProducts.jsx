@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const AddProducts = () => {
   const [brand, setBrand] = useState("");
@@ -13,16 +14,24 @@ const AddProducts = () => {
     const description = form.description.value;
     const car = { image, name, price, description, brand, type, rating };
     console.log(car);
-    fetch("http://localhost:5000/cars",{
-        method:'POST',
-        headers:{
-            "content-type":"application/json"
-        },
-        body:JSON.stringify(car)
+    fetch("http://localhost:5000/cars", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(car),
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Successfully added.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          
+        }
       });
   };
 
@@ -39,9 +48,8 @@ const AddProducts = () => {
   return (
     <div className="pt-32 min-h-screen ">
       <div className="container px-2 mx-auto  ">
-      <h2 className="uppercase mb-5 text-center border-b-4 border-gray-600 font-bold text-red-500 text-4xl">
-          
-         Add new Products
+        <h2 className="uppercase mb-5 text-center border-b-4 border-gray-600 font-bold text-red-500 text-4xl">
+          Add new Products
         </h2>
         <form onSubmit={handleAddProduct}>
           <div className="md:flex gap-4">
