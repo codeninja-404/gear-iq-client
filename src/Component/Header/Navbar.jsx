@@ -1,10 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(null);
   const { user, logOut } = useContext(AuthContext);
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   const link = (
     <>
       <li className="my-1 text-yellow-400">
@@ -72,7 +90,9 @@ const Navbar = () => {
                     <img src={user.photoURL} />
                   </div>
                 </div>
-                <p className="text-white text-xs md:text-xl">{user.displayName}</p>
+                <p className="text-white text-xs md:text-xl">
+                  {user.displayName}
+                </p>
               </div>
               <Link
                 onClick={() => logOut()}
@@ -90,6 +110,11 @@ const Navbar = () => {
               Log In
             </Link>
           )}
+          <input
+            type="checkbox"
+            onClick={handleThemeSwitch}
+            className="toggle ml-2 toggle-error"
+          />
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-600 bg-opacity-30">
       <footer className="md:flex container mx-auto justify-between items-center text-center  p-10  text-base-content">
-        <aside className="my-4">
+        <aside className="my-4 dark:text-white">
           <div className="mx-auto">
             <div className="w-28 mx-auto my-2">
               <img
@@ -25,7 +25,7 @@ const Footer = () => {
         </aside>
         <nav className="my-4">
           <header className="uppercase font-bold text-red-500 ">Services</header>
-          <div className="flex flex-col justify-between items-center">
+          <div className="flex dark:text-white flex-col justify-between items-center">
             <a className="link link-hover">Brand Cars</a>
             <a className="link link-hover">Modification</a>           
             <a className="link link-hover">Rental</a>
@@ -33,14 +33,14 @@ const Footer = () => {
         </nav>
         <nav className="my-4">
           <header className="uppercase font-bold text-red-500">Company</header>
-          <div className="flex flex-col justify-between items-center">
+          <div className="flex dark:text-white flex-col justify-between items-center">
             <a className="link link-hover">About us</a>
             <a className="link link-hover">Contact</a>
           </div>
         </nav>
         <nav className="my-4">
           <header className="uppercase font-bold text-red-500">Legal</header>
-          <div className="flex flex-col justify-between items-center">
+          <div className="flex dark:text-white flex-col justify-between items-center">
             <a className="link link-hover">Terms of use</a>
             <a className="link link-hover">Privacy policy</a>
             <a className="link link-hover">Cookie policy</a>

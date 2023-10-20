@@ -52,7 +52,7 @@ const AddProducts = () => {
         <form onSubmit={handleAddProduct}>
           <div className="md:flex gap-4">
             <div className="md:w-1/2">
-              <label className="label">Image URL</label>
+              <label className="label dark:text-white">Image URL</label>
               <input
                 type="text"
                 name="imageUrl"
@@ -62,7 +62,7 @@ const AddProducts = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <label className="label">Car Name</label>
+              <label className="label dark:text-white">Car Name</label>
               <input
                 type="text"
                 name="name"
@@ -77,7 +77,7 @@ const AddProducts = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Brand Name:</label>
+              <label className="label dark:text-white">Brand Name:</label>
               <select
                 className="w-full input input-bordered"
                 id="gender"
@@ -97,7 +97,7 @@ const AddProducts = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Car Type:</label>
+              <label className="label dark:text-white">Car Type:</label>
               <select
                 className="w-full input input-bordered"
                 id="gender"
@@ -114,7 +114,7 @@ const AddProducts = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Price:</label>
+              <label className="label dark:text-white">Price:</label>
               <input
                 type="number"
                 name="price"
@@ -127,7 +127,7 @@ const AddProducts = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Rating:</label>
+              <label className="label dark:text-white">Rating:</label>
               <select
                 className="w-full input input-bordered"
                 id="gender"
@@ -145,7 +145,7 @@ const AddProducts = () => {
           </div>
           <div>
             <div className="">
-              <label className="label">Car Description:</label>
+              <label className="label dark:text-white">Car Description:</label>
               <textarea
                 type="text"
                 name="description"
@@ -158,7 +158,7 @@ const AddProducts = () => {
 
           <div className="my-4 text-center">
             <input
-              className="btn bg-green-400 text-xl font-bold btn-wide "
+              className="btn bg-green-600  dark:text-white text-xl font-bold btn-wide "
               type="submit"
               value="Add Product"
             />

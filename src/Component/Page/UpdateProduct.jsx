@@ -48,7 +48,7 @@ const UpdateProduct = () => {
         <form onSubmit={handleUpdate}>
           <div className="md:flex gap-4">
             <div className="md:w-1/2">
-              <label className="label">Image URL</label>
+              <label className="label dark:text-white ">Image URL</label>
               <input
                 type="text"
                 name="imageUrl"
@@ -59,7 +59,7 @@ const UpdateProduct = () => {
               />
             </div>
             <div className="md:w-1/2">
-              <label className="label">Car Name</label>
+              <label className="label dark:text-white ">Car Name</label>
               <input
                 type="text"
                 name="name"
@@ -75,13 +75,13 @@ const UpdateProduct = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Brand Name:</label>
+              <label className="label dark:text-white ">Brand Name:</label>
               <select
                 className="w-full input input-bordered"
                 onChange={handleBrandChange}
                 required
               >
-                <option value="">{singleData.brand}....</option>
+                <option value="">{singleData.brand}.... Previus input</option>
                 <option value="toyota">Toyota</option>
                 <option value="ford">Ford</option>
                 <option value="honda">Honda</option>
@@ -94,13 +94,13 @@ const UpdateProduct = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Car Type:</label>
+              <label className="label dark:text-white ">Car Type:</label>
               <select
                 className="w-full input input-bordered"
                 onChange={handleTypeChange}
                 required
               >
-                <option value="">{singleData.type}...</option>
+                <option  value="">{singleData.type}....Previus input</option>
                 <option value="suv">Suv</option>
                 <option value="sports">Sports</option>
                 <option value="family">Family</option>
@@ -110,7 +110,7 @@ const UpdateProduct = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Price:</label>
+              <label className="label dark:text-white ">Price:</label>
               <input
                 type="number"
                 name="price"
@@ -124,13 +124,13 @@ const UpdateProduct = () => {
               className="md:w-1/4
             "
             >
-              <label className="label">Rating:</label>
+              <label className="label dark:text-white ">Rating:</label>
               <select
                 className="w-full input input-bordered"
                 onChange={handleRatingChange}
                 required
               >
-                <option value="">{singleData.rating}...</option>
+                <option value="">{singleData.rating}....Previus input</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -143,7 +143,7 @@ const UpdateProduct = () => {
 
           <div className="my-4 text-center">
             <input
-              className="btn bg-green-400 text-xl font-bold btn-wide "
+              className="btn bg-green-600  dark:text-white text-xl font-bold btn-wide "
               type="submit"
               value="Update Product"
             />

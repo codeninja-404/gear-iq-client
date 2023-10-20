@@ -11,7 +11,7 @@ const CarCards = ({ car }) => {
           <img className="h-full" src={image} alt="Album" />
         </figure>
         <div className="card-body  lg:w-1/2">
-          <h2 className="card-title uppercase font-extrabold border-b-2 border-gray-500">
+          <h2 className="card-title dark:text-white uppercase font-extrabold border-b-2 border-gray-500">
             {brand}
           </h2>
           <div className="flex justify-between">
@@ -21,7 +21,7 @@ const CarCards = ({ car }) => {
             </p>
           </div>
           <div className="flex">
-            <p className="font-bold">$ {price}</p>
+            <p className="font-bold dark:text-white">$ {price}</p>
             <Star rating={rating}></Star>
           </div>
           <div className=" flex gap-2 ">

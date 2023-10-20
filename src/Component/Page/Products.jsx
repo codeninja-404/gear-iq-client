@@ -59,7 +59,7 @@ const Products = () => {
             ))}
           </Swiper>
         </div>
-        <h2 className="uppercase border-gray-500 text-center border-b-2 mb-5 pb-2 text-3xl">
+        <h2 className="uppercase dark:text-white border-gray-500 text-center border-b-2 mb-5 pb-2 text-3xl">
           Cars Available based on {brandName} brand
         </h2>
         <div>
