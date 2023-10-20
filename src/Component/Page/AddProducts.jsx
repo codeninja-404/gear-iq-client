@@ -1,7 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-
 const AddProducts = () => {
   const [brand, setBrand] = useState("");
   const [type, setType] = useState("");
@@ -14,7 +13,7 @@ const AddProducts = () => {
     const price = form.price.value;
     const description = form.description.value;
     const car = { image, name, price, description, brand, type, rating };
-    console.log(car);
+    
     fetch(
       "https://gear-iq-server-eyyubjt7l-saidul-arefins-projects.vercel.app/cars",
       {
@@ -28,9 +27,10 @@ const AddProducts = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          toast.success("Deleted cart item successfully!");
+          toast.success("Added item successfully!");
         }
       });
+    form.reset();
   };
 
   const handleBrandChange = (e) => {
