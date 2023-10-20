@@ -8,6 +8,7 @@ import UpdateProduct from "./Component/Page/UpdateProduct";
 import Details from "./Component/Page/Cards/Details";
 import Error from "./Component/Page/Error";
 import Login from "./Component/Page/Login";
+import Register from "./Component/Page/Register";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/update/:id",
