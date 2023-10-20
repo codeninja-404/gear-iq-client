@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-  const handleSignUp = () => {};
+  const { createUser } = useContext(AuthContext);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    if (password.length < 6) {
+      return toast.error("Password must have atleast 6 charecters.");
+    } else if (!/[A-Z]/.test(password)) {
+      return toast.error("Password must have atleast one uppercase letter.");
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+      return toast.error("Password must have special charecter.");
+    }
+    createUser(email, password)
+      .then((res) => toast.success("Sign Up Successful"))
+      .catch((err) => toast.error(err.message));
+  };
   return (
     <div className="pt-32 min-h-screen ">
       <div className="container px-2 mx-auto mb-20 ">
