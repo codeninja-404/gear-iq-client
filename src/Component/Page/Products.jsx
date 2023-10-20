@@ -17,7 +17,9 @@ const Products = () => {
     car?.brand.toLowerCase().includes(brandName.toLowerCase())
   );
   useEffect(() => {
-    fetch("http://localhost:5000/adds")
+    fetch(
+      "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/adds"
+    )
       .then((res) => res.json())
       .then((data) => setAdds(data));
   }, []);

@@ -7,7 +7,7 @@ const Details = () => {
   const [added, setAdded] = useState(false);
   const handleAddToCart = () => {
     if (!added) {
-      fetch("http://localhost:5000/cart", {
+      fetch("https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cart", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -14,7 +14,7 @@ const AddProducts = () => {
     const description = form.description.value;
     const car = { image, name, price, description, brand, type, rating };
     console.log(car);
-    fetch("http://localhost:5000/cars", {
+    fetch("https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars", {
       method: "POST",
       headers: {
         "content-type": "application/json",

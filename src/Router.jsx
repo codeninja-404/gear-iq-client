@@ -20,7 +20,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () =>
+          fetch(
+            "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/brands"
+          ),
       },
       {
         path: "/add",
@@ -46,7 +49,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cars/${params.id}`),
+          fetch(
+            `https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars/${params.id}`
+          ),
       },
       {
         path: "/details/:id",
@@ -56,7 +61,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cars/${params.id}`),
+          fetch(
+            `https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars/${params.id}`
+          ),
       },
       {
         path: "/cart",
@@ -65,12 +72,18 @@ export const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () =>
+          fetch(
+            "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cart"
+          ),
       },
       {
         path: "/products/:brandName",
         element: <Products></Products>,
-        loader: ({ params }) => fetch("http://localhost:5000/cars"),
+        loader: ({ params }) =>
+          fetch(
+            "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars"
+          ),
       },
     ],
   },

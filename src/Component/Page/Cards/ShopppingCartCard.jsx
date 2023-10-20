@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 
 const ShopppingCartCard = ({ cart, shoppingCart, setShoppingCart }) => {
   const handleRemove = () => {
-    fetch(`http://localhost:5000/cart/${cart._id}`, {
+    fetch(`https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cart/${cart._id}`, {
       method: "delete",
     })
       .then((res) => res.json())
