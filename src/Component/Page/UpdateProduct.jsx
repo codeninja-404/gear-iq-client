@@ -17,7 +17,7 @@ const UpdateProduct = () => {
 
     const update = { image, name, price, brand, type, rating };
 
-    fetch(`https://gear-iq-server-eyyubjt7l-saidul-arefins-projects.vercel.app/cars/${singleData._id}`, {
+    fetch(`https://gear-iq-server-93e3a7go2-saidul-arefins-projects.vercel.app/cars/${singleData._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

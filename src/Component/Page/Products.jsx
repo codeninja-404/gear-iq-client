@@ -18,7 +18,7 @@ const Products = () => {
   );
   useEffect(() => {
     fetch(
-      "https://gear-iq-server-eyyubjt7l-saidul-arefins-projects.vercel.app/adds"
+      "https://gear-iq-server-93e3a7go2-saidul-arefins-projects.vercel.app/adds"
     )
       .then((res) => res.json())
       .then((data) => setAdds(data));
