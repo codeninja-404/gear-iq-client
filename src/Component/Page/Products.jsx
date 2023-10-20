@@ -65,7 +65,7 @@ const Products = () => {
         <div>
           {singleBrand.length > 0 ? (
             <div className="gap-4 grid md:grid-cols-2">
-              {singleBrand.map((car) => (
+              {singleBrand?.map((car) => (
                 <CarCards key={car._id} car={car}></CarCards>
               ))}
             </div>

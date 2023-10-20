@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Swal from "sweetalert2";
+import toast from "react-hot-toast";
+
 
 const AddProducts = () => {
   const [brand, setBrand] = useState("");
@@ -14,23 +15,20 @@ const AddProducts = () => {
     const description = form.description.value;
     const car = { image, name, price, description, brand, type, rating };
     console.log(car);
-    fetch("https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(car),
-    })
+    fetch(
+      "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(car),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire({
-            icon: "success",
-            title: "Successfully added.",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          
+          toast.success("Deleted cart item successfully!");
         }
       });
   };

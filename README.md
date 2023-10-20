@@ -1,8 +1,11 @@
-# React + Vite
+### GearIQ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+live link : https://gear-iq-client.web.app
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### About Project
+- The back end of this is based on express js, and used mongobd as data base,
+- In this project user can add new data to the database and update the data if needed.
+- User can add cars to cart if nedded and remove them on need.
+- To be able to use the features of this project users must log in or register to the site.
+- Used firebase auth for suthentication in the project,
+- Every single data in the project is loaded from serverside.

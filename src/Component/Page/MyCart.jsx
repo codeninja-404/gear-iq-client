@@ -15,7 +15,7 @@ const MyCart = () => {
         {shoppingCart.length > 0 ? (
           <div>
             {" "}
-            {shoppingCart.map((cart) => (
+            {shoppingCart?.map((cart) => (
               <ShopppingCartCard
                 key={cart._id}
                 shoppingCart={shoppingCart}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
@@ -24,7 +25,9 @@ const UpdateProduct = () => {
       body: JSON.stringify(update),
     })
       .then((res) => res.json())
-      .then((data) => {});
+      .then((data) => {
+        toast.success("Updated item successfully!");
+      });
   };
 
   const handleBrandChange = (e) => {

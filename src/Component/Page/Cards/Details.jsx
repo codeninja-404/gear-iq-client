@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -17,12 +18,7 @@ const Details = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {
-            Swal.fire({
-              icon: "success",
-              title: "Successfully added to cart.",
-              showConfirmButton: false,
-              timer: 1500,
-            });
+            toast.success("Added to cart successfully!");
             setAdded(true);
           }
         });
