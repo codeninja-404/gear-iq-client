@@ -7,6 +7,7 @@ import Products from "./Component/Page/Products";
 import UpdateProduct from "./Component/Page/UpdateProduct";
 import Details from "./Component/Page/Cards/Details";
 import Error from "./Component/Page/Error";
+import Login from "./Component/Page/Login";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/add",
         element: <AddProducts></AddProducts>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/update/:id",
