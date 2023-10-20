@@ -16,7 +16,7 @@ const AddProducts = () => {
     const car = { image, name, price, description, brand, type, rating };
     console.log(car);
     fetch(
-      "https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cars",
+      "https://gear-iq-server-eyyubjt7l-saidul-arefins-projects.vercel.app/cars",
       {
         method: "POST",
         headers: {

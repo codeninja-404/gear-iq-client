@@ -8,7 +8,7 @@ const Details = () => {
   const [added, setAdded] = useState(false);
   const handleAddToCart = () => {
     if (!added) {
-      fetch("https://gear-iq-server-q3uokvjfu-saidul-arefins-projects.vercel.app/cart", {
+      fetch("https://gear-iq-server-eyyubjt7l-saidul-arefins-projects.vercel.app/cart", {
         method: "POST",
         headers: {
           "content-type": "application/json",
