@@ -1,8 +1,25 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
-  const handleLogin = () => {};
+  const { logIn } = useContext(AuthContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    logIn(email, password)
+      .then((result) => {
+        toast.success("User Logged In successful!");
+      })
+      .catch((err) => {
+        toast.error(err.code);
+      });
+  };
 
   const handleGoogleLogIn = () => {};
   return (
@@ -39,7 +56,10 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn  bg-blue-950 text-white hover:text-black" type="submit">
+                <button
+                  className="btn  bg-blue-950 text-white hover:text-black"
+                  type="submit"
+                >
                   LOG IN
                 </button>
                 <Link
