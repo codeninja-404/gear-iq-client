@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/brands.json"),
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/add",

@@ -1,10 +1,19 @@
-const ShopppingCartCard = ({ cart }) => {
+import toast from "react-hot-toast";
+
+const ShopppingCartCard = ({ cart, shoppingCart, setShoppingCart }) => {
   const handleRemove = () => {
     fetch(`http://localhost:5000/cart/${cart._id}`, {
       method: "delete",
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          console.log(data);
+          toast.success("Deleted cart item successfully!");
+        }
+        const remaining = shoppingCart.filter((item) => item._id !== cart._id);
+        setShoppingCart(remaining);
+      });
   };
   return (
     <div>

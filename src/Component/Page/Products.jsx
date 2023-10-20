@@ -17,7 +17,7 @@ const Products = () => {
     car?.brand.toLowerCase().includes(brandName.toLowerCase())
   );
   useEffect(() => {
-    fetch("/add.json")
+    fetch("http://localhost:5000/adds")
       .then((res) => res.json())
       .then((data) => setAdds(data));
   }, []);
@@ -69,8 +69,12 @@ const Products = () => {
             </div>
           ) : (
             <div className="text-center space-y-6 my-20">
-              <h2 className="font-bold uppercase text-4xl text-red-500">Sorry ....</h2>
-              <p className="font-bold text-3xl">NO Cars Available For now!!!!</p>
+              <h2 className="font-bold uppercase text-4xl text-red-500">
+                Sorry ....
+              </h2>
+              <p className="font-bold text-3xl">
+                NO Cars Available For now!!!!
+              </p>
             </div>
           )}
         </div>
