@@ -5,7 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { logIn } = useContext(AuthContext);
+  const { logIn, logInGoogle } = useContext(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -20,8 +20,14 @@ const Login = () => {
         toast.error(err.code);
       });
   };
+  const handleGoogleLogIn = () => {
+    logInGoogle()
+      .then((result) => {
+        toast.success("User Logged In successful!");
+      })
+      .catch((err) => toast.error("Log In failed!"));
+  };
 
-  const handleGoogleLogIn = () => {};
   return (
     <div className="pt-32 min-h-screen ">
       <div className="container px-2 mx-auto mb-20 ">
