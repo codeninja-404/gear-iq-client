@@ -48,8 +48,8 @@ const Details = () => {
               <p className="break-words dark:text-white ">{singleCar.description}</p>
             </div>
           </div>
-          <figure className="h-[50vh] ">
-            <img className="w-full" src={singleCar.image} alt="car" />
+          <figure className="h-[20vh] md:h-[40vh] ">
+            <img className="w-full " src={singleCar.image} alt="car" />
           </figure>
         </div>
       </div>
