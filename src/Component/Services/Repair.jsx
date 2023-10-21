@@ -28,8 +28,8 @@ const Repair = () => {
       <div>
         <div className="my-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* c1 */}
-          <div className="card flex flex-row items-center justify-between border-2  shadow-xl">
-            <figure className=" p-10 ">
+          <div className="card flex flex-row items-center justify-between ">
+            <figure className="border-2 rounded-full shadow-xl p-10 ">
               <img src={wallet} alt="wallet" className="" />
             </figure>
             <div className="card-body">
@@ -42,8 +42,8 @@ const Repair = () => {
             </div>
           </div>
           {/* c2 */}
-          <div className="card flex flex-row items-center justify-between border-2  shadow-xl">
-            <figure className=" p-10 ">
+          <div className="card flex flex-row items-center justify-between ">
+            <figure className="border-2 rounded-full shadow-xl p-10 ">
               <img src={oil} alt="oil" className="" />
             </figure>
             <div className="card-body">
@@ -57,8 +57,8 @@ const Repair = () => {
             </div>
           </div>
           {/* c3 */}
-          <div className="card flex flex-row items-center justify-between border-2  shadow-xl">
-            <figure className=" p-10 ">
+          <div className="card flex flex-row items-center justify-between ">
+            <figure className="border-2 rounded-full shadow-xl p-10 ">
               <img src={quality} alt="quality" className="" />
             </figure>
             <div className="card-body">
