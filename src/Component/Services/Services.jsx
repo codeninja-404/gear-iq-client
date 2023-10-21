@@ -16,7 +16,7 @@ const Services = () => {
           </figure>
 
           <div className="card-body ">
-            <h2 className=" text-center text-3xl py-2 rounded-full border-green-500 border-2">
+            <h2 className=" text-center text-xl py-1  rounded-full border-green-500 border-2">
               TRAVEL RENTAL
             </h2>
             <p>
@@ -40,7 +40,7 @@ const Services = () => {
           </figure>
 
           <div className="card-body ">
-            <h2 className=" text-center text-3xl py-2 rounded-full border-red-500 border-2">
+            <h2 className=" text-center text-xl py-1  rounded-full border-red-500 border-2">
               BUSINESS RENTAL
             </h2>
             <p>
@@ -64,7 +64,7 @@ const Services = () => {
           </figure>
 
           <div className="card-body ">
-            <h2 className=" text-center text-3xl py-2 rounded-full border-green-500 border-2">
+            <h2 className=" text-center text-xl py-1 rounded-full border-green-500 border-2">
               LUXURY RENTAL
             </h2>
             <p>
