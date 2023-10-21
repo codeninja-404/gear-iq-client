@@ -7,7 +7,7 @@ const BrandCard = ({ brand }) => {
     <div>
       <Link to={`/products/${brandName}`}>
         <div className="card  shadow-xl image-full">
-          <figure className=" h-[8vh]">
+          <figure className=" h-[15vh]">
             <img className="w-full" src={imageUrl} alt={brandName} />
           </figure>
           <div className="card-body  flex-col justify-end">
