@@ -9,3 +9,9 @@ live link : https://gear-iq-client.web.app
 - To be able to use the features of this project users must log in or register to the site.
 - Used firebase auth for suthentication in the project,
 - Every single data in the project is loaded from serverside.
+### Technologys
+-Firebase 
+-React Hot Toast
+-SwiperJs
+-TailwindCSS
+-DaisyUI
