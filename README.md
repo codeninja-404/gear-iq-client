@@ -10,8 +10,8 @@ live link : https://gear-iq-client.web.app
 - Used firebase auth for suthentication in the project,
 - Every single data in the project is loaded from serverside.
 ### Technologys
--Firebase 
--React Hot Toast
--SwiperJs
--TailwindCSS
--DaisyUI
+- Firebase 
+- React Hot Toast
+- SwiperJs
+- TailwindCSS
+- DaisyUI
